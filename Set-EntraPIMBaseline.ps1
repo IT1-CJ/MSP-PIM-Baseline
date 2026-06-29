@@ -1,4 +1,4 @@
-#Requires -Modules Microsoft.Graph.Identity.Governance, Microsoft.Graph.Authentication
+#Requires -Modules Microsoft.Graph.Identity.Governance, Microsoft.Graph.Authentication, Microsoft.Graph.Users
 
 <#
 .SYNOPSIS
@@ -152,7 +152,7 @@ if ($anyApprovalRequired -and -not $ApproverUserId) {
 
 Write-Log "Connecting to Microsoft Graph..."
 
-$requiredScopes = @("RoleManagementPolicy.ReadWrite.Directory", "RoleManagement.Read.Directory")
+$requiredScopes = @("RoleManagementPolicy.ReadWrite.Directory", "RoleManagement.Read.Directory", "User.Read.All")
 
 try {
     if ($ClientId -and $CertificateThumbprint -and $TenantId) {

@@ -24,13 +24,14 @@ of the script. Adjust per client risk appetite without touching any logic below 
 ## Requirements
 
 - PowerShell 7+
-- Microsoft Graph PowerShell SDK: `Microsoft.Graph.Identity.Governance`, `Microsoft.Graph.Authentication`
-- Permissions: `RoleManagementPolicy.ReadWrite.Directory`, `RoleManagement.Read.Directory`
+- Microsoft Graph PowerShell SDK: `Microsoft.Graph.Identity.Governance`, `Microsoft.Graph.Authentication`, `Microsoft.Graph.Users`
+- Permissions: `RoleManagementPolicy.ReadWrite.Directory`, `RoleManagement.Read.Directory`, `User.Read.All` (to resolve `-ApproverUserId` by UPN)
 - An approver (UPN or object ID) if any tier has `RequireApproval = $true`
 
 ```powershell
 Install-Module Microsoft.Graph.Identity.Governance -Scope CurrentUser
 Install-Module Microsoft.Graph.Authentication -Scope CurrentUser
+Install-Module Microsoft.Graph.Users -Scope CurrentUser
 ```
 
 ## Usage
