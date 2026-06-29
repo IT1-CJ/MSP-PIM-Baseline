@@ -24,7 +24,7 @@ of the script. Adjust per client risk appetite without touching any logic below 
 ## Requirements
 
 - PowerShell 7+
-- Microsoft Graph PowerShell SDK: `Microsoft.Graph.Identity.Governance`, `Microsoft.Graph.Authentication`, `Microsoft.Graph.Users`
+- Microsoft Graph PowerShell SDK: `Microsoft.Graph.Identity.Governance`, `Microsoft.Graph.Authentication`, `Microsoft.Graph.Users`, `Microsoft.Graph.Identity.SignIns`
 - Permissions: `RoleManagementPolicy.ReadWrite.Directory`, `RoleManagement.Read.Directory`, `User.Read.All` (to resolve `-ApproverUserId` by UPN)
 - An approver (UPN or object ID) if any tier has `RequireApproval = $true`
 
@@ -32,6 +32,7 @@ of the script. Adjust per client risk appetite without touching any logic below 
 Install-Module Microsoft.Graph.Identity.Governance -Scope CurrentUser
 Install-Module Microsoft.Graph.Authentication -Scope CurrentUser
 Install-Module Microsoft.Graph.Users -Scope CurrentUser
+Install-Module Microsoft.Graph.Identity.SignIns -Scope CurrentUser
 ```
 
 ## Usage

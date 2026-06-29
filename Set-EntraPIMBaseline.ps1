@@ -1,4 +1,4 @@
-#Requires -Modules Microsoft.Graph.Identity.Governance, Microsoft.Graph.Authentication, Microsoft.Graph.Users
+#Requires -Modules Microsoft.Graph.Identity.Governance, Microsoft.Graph.Authentication, Microsoft.Graph.Users, Microsoft.Graph.Identity.SignIns
 
 <#
 .SYNOPSIS
